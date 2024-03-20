@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\ResourceController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/page-1', [PageController::class, 'viewPagekOne'])->name('link1');
 
 Route::get('/page-2', [PageController::class, 'viewPagekTwo'])->name('link2');
+
+Route::get('/', [ResourceController::class, 'index'])->name('home');
