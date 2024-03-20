@@ -20,3 +20,13 @@ Create Model relativo ed un Controller per mostrare nella home page tutti i tren
 ### Bonus
 
 Create una seconda migration per aggiungere/modificare una colonna della tabella
+
+<hr>
+
+#### IL giro da fare:
+
+-   Creare il DB su phpMyAdmin
+-   Creare con Laravel la **migration** per strutturare la tabella (colonne) e il tipo di dato
+-   Effettuare la migration (metodo **up**)
+-   Creare il Model Relativo alla tabella creata
+-   Impostare il controller per recuperare e passare i dati da stampare in pagina

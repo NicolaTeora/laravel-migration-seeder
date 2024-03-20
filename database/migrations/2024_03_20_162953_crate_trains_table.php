@@ -14,6 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
+            /**
+             *  Colonne e tipo di dati che saranno inseriti nella tabella
+             * 
+             */
             $table->id();
 
             $table->string('agency', 50); //azienda
