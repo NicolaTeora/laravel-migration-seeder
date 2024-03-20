@@ -25,6 +25,7 @@ return new class extends Migration
             $table->smallInteger('num_carriages'); //Numero Carrozze
             $table->boolean('in_time');   //In orario
             $table->boolean('deleted');    //Cancellato
+
             $table->timestamps();
         });
     }
