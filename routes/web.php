@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Rotte per la navigazione delle pagine
 Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('/page-1', [PageController::class, 'viewPagekOne'])->name('link1');
 
 Route::get('/page-2', [PageController::class, 'viewPagekTwo'])->name('link2');
 
+//Rotta per gestire i Modelli(risorse del DB)
 Route::get('/', [ResourceController::class, 'index'])->name('home');
