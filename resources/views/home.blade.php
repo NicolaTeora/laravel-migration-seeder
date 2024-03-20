@@ -8,6 +8,8 @@
     <ul>
         
       <li>
+        <strong>{{$train->agency}}</strong>
+        <br>
         <strong>Treno: </strong>
         <span>{{$train->code_train}}</span>
       </li>
