@@ -4,7 +4,6 @@
   <div class="container py-3">
     
     <h1>home page</h1>
-
     @forelse ($trains as $train)
     <ul>
         
@@ -26,9 +25,12 @@
         <strong>Delle ore: </strong>
         <span>{{$train->arrival_time}}</span>
       </li>
+      <li>
+        <strong>Numero Carrozze: </strong><span>{{$train->num_carriages}}</span>
+      </li>
     </ul>  
     @empty
-        
+        <h3>Nessun Treno</h3>
     @endforelse
 
   </div>
