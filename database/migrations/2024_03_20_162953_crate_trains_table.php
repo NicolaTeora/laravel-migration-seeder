@@ -16,8 +16,15 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
 
-
-
+            $table->string('agency', 50); //azienda
+            $table->text('departure_station'); //Stazione di partenza
+            $table->text('arrival_station'); //Stazione di arrivo
+            $table->time('departure_time'); //Orario di partenza
+            $table->time('arrival_time'); //Orario di arrivo
+            $table->string('code_train', 25); //Codice Treno
+            $table->smallInteger('num_carriages'); //Numero Carrozze
+            $table->boolean('in_time');   //In orario
+            $table->boolean('deleted');    //Cancellato
             $table->timestamps();
         });
     }
@@ -29,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personal_access_tokens');
+        Schema::dropIfExists('trains');
     }
 };
