@@ -23,10 +23,19 @@ Create una seconda migration per aggiungere/modificare una colonna della tabella
 
 <hr>
 
-#### IL giro da fare:
+### IL giro da fare:
+
+#### Migration
 
 -   Creare il DB su phpMyAdmin
 -   Creare con Laravel la **migration** per strutturare la tabella (colonne) e il tipo di dato
 -   Effettuare la migration (metodo **up**)
 -   Creare il Model Relativo alla tabella creata
 -   Impostare il controller per recuperare e passare i dati da stampare in pagina
+
+#### Seeders
+
+-   creare il file tramite il comando `php artisan make:seeder TrainSeeder`
+-   istanziare l'oggetto nel metodo `run()` relativo al modello
+    -   passare le caratteristiche definite nel database
+-   per lanciare `php artisan db:seed --class=TrainSeed`
