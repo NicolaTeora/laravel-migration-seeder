@@ -10,6 +10,9 @@ use App\Models\Train;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+//si possono generare dati random importnado utilizzando Faker
+use Faker\Generator as Faker;
+
 class TrainSeeder extends Seeder
 {
     /**
@@ -17,7 +20,9 @@ class TrainSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+
+    //importo il Faker nella funzione
+    public function run(Faker $faker)
     {
         /**
          * 1- instanziare un nuovo esemplare/oggetto
@@ -25,6 +30,15 @@ class TrainSeeder extends Seeder
          */
 
         $train = new Train;
+
+        $train->agency = $faker->company();
+        $train->departure_station = $faker->city();
+        $train->arrival_station = $faker->city();
+        $train->departure_time = $faker->date() . " " . $faker->time();
+        $train->arrival_time = $faker->date() . " " . $faker->time();
+        $train->code_train = $faker->randomNumber(5, true);
+        $train->num_carriages = $faker->randomDigit();
+        /*
         $train->agency = "Orienta Express";
         $train->departure_station = "Pechino";
         $train->arrival_station = "Vienna";
@@ -34,6 +48,8 @@ class TrainSeeder extends Seeder
         $train->num_carriages = 100;
         $train->in_time = true;
         $train->deleted = false;
+        */
+
         /** 
          * 3- salvare la riga
          */
